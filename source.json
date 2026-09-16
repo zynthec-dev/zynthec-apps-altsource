@@ -1,11 +1,13 @@
 {
   "name": "zynthec Apps",
-  "identifier": "dev.zynthec.apps",
-  "subtitle": "Eigene Apps und ausgewählte Community-Apps",
-  "description": "Apps von zynthec und Original-Releases ausgewählter Entwickler. SideInstaller wird direkt von FrizzleM bezogen.",
+  "subtitle": "Apps von mir und ausgewählte Sachen",
+  "description": "Apps von Rene und SideInstaller wird direkt von Originalentwickler \"FrizzleM\" bezogen.",
+  "iconURL": "https://i.imgur.com/323byLg.png",
   "website": "https://github.com/zynthec-dev/zynthec-apps-altsource",
-  "sourceURL": "https://raw.githubusercontent.com/zynthec-dev/zynthec-apps-altsource/main/source.json",
-  "iconURL": "https://raw.githubusercontent.com/zynthec-dev/zynthec-apps-altsource/main/icons/mipet.png",
+  "patreonURL": "",
+  "tintColor": "#00c010",
+  "featuredApps": [],
+  "headerURL": "https://i.imgur.com/k4spn6c.jpeg",
   "apps": [
     {
       "name": "SideInstaller",

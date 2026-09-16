@@ -1,0 +1,34 @@
+name: Update SideInstaller source
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: zynthec-apps-source
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/update_sideinstaller_source.py
+            source.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read official release and IPA metadata
+        run: python scripts/update_sideinstaller_source.py
+      - name: Publish changed source
+        run: |
+          if git diff --quiet -- source.json; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add source.json
+          git commit -m 'Update SideInstaller release source [skip ci]'
+          git push

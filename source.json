@@ -1,0 +1,73 @@
+{
+  "name": "zynthec Apps",
+  "identifier": "dev.zynthec.apps",
+  "subtitle": "Eigene Apps und ausgewählte Community-Apps",
+  "description": "Apps von zynthec und Original-Releases ausgewählter Entwickler. SideInstaller wird direkt von FrizzleM bezogen.",
+  "website": "https://github.com/zynthec-dev/zynthec-apps-altsource",
+  "sourceURL": "https://raw.githubusercontent.com/zynthec-dev/zynthec-apps-altsource/main/source.json",
+  "iconURL": "https://raw.githubusercontent.com/zynthec-dev/zynthec-apps-altsource/main/icons/mipet.png",
+  "apps": [
+    {
+      "name": "SideInstaller",
+      "bundleIdentifier": "com.frizzlem.sideinstaller",
+      "developerName": "FrizzleM",
+      "localizedDescription": "SideInstaller installs SideStore and other IPA apps on your device. This community source links directly to the original releases by FrizzleM. Pairing and VPN requirements: https://github.com/FrizzleM/SideInstaller",
+      "iconURL": "https://raw.githubusercontent.com/FrizzleM/SideInstaller/v1.0.0/app-icon.png",
+      "category": "utilities",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "9",
+          "date": "2026-09-14T17:59:20Z",
+          "downloadURL": "https://github.com/FrizzleM/SideInstaller/releases/download/v1.0.0/SideInstaller.ipa",
+          "size": 9243749,
+          "minOSVersion": "18.0",
+          "localizedDescription": "Original release v1.0.0. Release notes: https://github.com/FrizzleM/SideInstaller/releases/tag/v1.0.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "get-task-allow"
+        ],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "SideInstaller advertises an on-device pairing service so this iPhone can pair with it, and connects to the local lockdown daemon to install apps.",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "SideInstaller can use location to keep running while you approve pairing in Settings.",
+          "NSLocationWhenInUseUsageDescription": "SideInstaller can use location to keep running while you approve pairing in Settings."
+        }
+      }
+    },
+    {
+      "name": "miPet",
+      "bundleIdentifier": "de.renewitt.mipet",
+      "developerName": "zynthec",
+      "localizedDescription": "Dein animiertes virtuelles Haustier mit Kokavogel, Textchat, Sprachgesprächen, Bildern und Erinnerungen. Eigener Gemini-API-Schlüssel erforderlich; in dieser öffentlichen Ausgabe sind keine Zugangsdaten enthalten. iCloud-Backups benötigen passende Berechtigungen beim Signieren; Datei-Backups sind unabhängig davon verfügbar.",
+      "iconURL": "https://raw.githubusercontent.com/zynthec-dev/zynthec-apps-altsource/main/icons/mipet.png",
+      "category": "entertainment",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "buildVersion": "2",
+          "date": "2026-09-16",
+          "downloadURL": "https://github.com/zynthec-dev/zynthec-apps-altsource/releases/download/mipet-v0.1.0-2/miPet-0.1.0-2.ipa",
+          "size": 15281081,
+          "minOSVersion": "17.0",
+          "localizedDescription": "Öffentliche Ausgabe mit Kokavogel, erweiterten Einstellungen und Backups. Ohne eingebauten API-Schlüssel."
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.icloud-container-identifiers",
+          "com.apple.developer.icloud-services",
+          "com.apple.developer.ubiquity-container-identifiers"
+        ],
+        "privacy": {
+          "NSCameraUsageDescription": "miPet benötigt die Kamera, damit du neue Fotos aufnehmen kannst.",
+          "NSMicrophoneUsageDescription": "miPet benötigt das Mikrofon, damit du in Echtzeit mit deinem Pet sprechen kannst.",
+          "NSPhotoLibraryAddUsageDescription": "miPet speichert deine ausgewählten Werke auf Wunsch in der Fotomediathek.",
+          "NSPhotoLibraryUsageDescription": "miPet benötigt Zugriff auf ausgewählte Fotos, um sie zu erklären oder zu bearbeiten."
+        }
+      }
+    }
+  ],
+  "news": []
+}

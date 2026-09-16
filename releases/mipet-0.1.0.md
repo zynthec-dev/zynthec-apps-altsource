@@ -1,4 +1,4 @@
-Öffentliche miPet-Version mit Kokavogel, Textchat, Sprachgesprächen, Bildern und Backups.
+KI-Bot für Kinder ab 3 Jahren. Funktionen: Textchat, Sprachgesprächen, Bilder erstellen/analysieren und Erinnerungsfunktionen.
 
 - Ohne eingebauten API-Schlüssel: eigenen Gemini-Zugang in der App eintragen.
 - Unsigned IPA für SideStore / AltStore, mindestens iOS 17.

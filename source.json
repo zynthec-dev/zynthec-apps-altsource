@@ -47,11 +47,11 @@
         {
           "version": "0.1.0",
           "buildVersion": "2",
-          "date": "2026-09-16",
-          "downloadURL": "https://github.com/zynthec-dev/zynthec-apps-altsource/releases/download/mipet-v0.1.0-2/miPet-0.1.0-2.ipa",
-          "size": 15281081,
           "minOSVersion": "17.0",
-          "localizedDescription": "Öffentliche Ausgabe mit Kokavogel, erweiterten Einstellungen und Backups. Ohne eingebauten API-Schlüssel."
+          "date": "2026-09-16T21:00:36Z",
+          "downloadURL": "https://github.com/zynthec-dev/zynthec-apps-altsource/releases/download/mipet-0.1.0-beta/miPet-0.1.0-beta.ipa",
+          "size": 15281081,
+          "localizedDescription": "KI-Bot für Kinder ab 3 Jahren. Funktionen: Textchat, Sprachgesprächen, Bilder erstellen/analysieren und Erinnerungsfunktionen.\r\n\r\n- Ohne eingebauten API-Schlüssel: eigenen Gemini-Zugang in der App eintragen.\r\n- Unsigned IPA für SideStore / AltStore, mindestens iOS 17.\r\n- iCloud-Entitlements sind beigelegt. Die Verfügbarkeit von iCloud hängt vom verwendeten Signierprofil ab.\r\n- Keine privaten Provisioning-Profile enthalten."
         }
       ],
       "appPermissions": {

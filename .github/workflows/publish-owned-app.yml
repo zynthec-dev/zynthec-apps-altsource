@@ -25,10 +25,6 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s scripts -p 'test_*.py' -v
-      - name: Repair accidentally uploaded private miPet asset
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: python scripts/repair_legacy_release.py
       - name: Synchronize published IPA assets
         env:
           GH_TOKEN: ${{ github.token }}

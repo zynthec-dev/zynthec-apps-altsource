@@ -15,15 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          sparse-checkout: |
-            scripts/update_sideinstaller_source.py
-            source.json
-          sparse-checkout-cone-mode: false
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Read official release and IPA metadata
         run: python scripts/update_sideinstaller_source.py
+      - run: python scripts/check_source.py --remote
       - name: Publish changed source
         run: |
           if git diff --quiet -- source.json; then exit 0; fi

@@ -1,16 +1,22 @@
-name: Index own app release
+name: Sync all IPA releases
 on:
   release:
-    types: [published]
+    types: [published, edited, deleted, unpublished, released, prereleased]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+  push:
+    branches: [main]
+    paths: ['scripts/**', 'apps.json', '.github/workflows/**']
 permissions:
   contents: write
 concurrency:
   group: zynthec-apps-source
   cancel-in-progress: false
 jobs:
-  index:
-    if: ${{ !github.event.release.prerelease }}
+  sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -18,12 +24,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python scripts/update_owned_app.py --event "$GITHUB_EVENT_PATH"
+      - run: python -m unittest discover -s scripts -p 'test_*.py' -v
+      - name: Repair accidentally uploaded private miPet asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/repair_legacy_release.py
+      - name: Synchronize published IPA assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/update_owned_app.py
+      - run: python scripts/check_source.py --remote
       - name: Commit source update
         run: |
           if git diff --quiet -- source.json; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add source.json
-          git commit -m 'Index published app release [skip ci]'
+          git commit -m 'Synchronize app releases [skip ci]'
           git push

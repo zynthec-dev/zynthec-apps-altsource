@@ -42,16 +42,16 @@
       "developerName": "zynthec",
       "localizedDescription": "Dein animiertes virtuelles Haustier. KI-Bot für Kinder ab 3 Jahren. Funktionen: Textchat, Sprachgesprächen, Bilder erstellen/analysieren und Erinnerungen. Eigener Gemini-API-Schlüssel erforderlich; in dieser öffentlichen Ausgabe sind keine Zugangsdaten enthalten. iCloud-Backups benötigen passende Berechtigungen beim Signieren; Datei-Backups sind unabhängig davon verfügbar.",
       "iconURL": "https://raw.githubusercontent.com/zynthec-dev/zynthec-apps-altsource/main/icons/mipet.png",
-      "category": "entertainment",
+      "category": "Kids",
       "versions": [
         {
           "version": "0.1.0",
-          "buildVersion": "2",
+          "buildVersion": "1",
           "date": "2026-09-16",
           "downloadURL": "https://github.com/zynthec-dev/zynthec-apps-altsource/releases/download/mipet-v0.1.0-2/miPet-0.1.0-2.ipa",
           "size": 15281081,
           "minOSVersion": "17.0",
-          "localizedDescription": "Öffentliche Ausgabe mit Kokavogel, erweiterten Einstellungen und Backups. Ohne eingebauten API-Schlüssel."
+          "localizedDescription": "Öffentliche Ausgabe mit erweiterten Einstellungen und Backups. Ohne eingebauten API-Schlüssel."
         }
       ],
       "appPermissions": {

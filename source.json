@@ -40,7 +40,7 @@
       "name": "miPet",
       "bundleIdentifier": "de.renewitt.mipet",
       "developerName": "zynthec",
-      "localizedDescription": "Dein animiertes virtuelles Haustier mit Kokavogel, Textchat, Sprachgesprächen, Bildern und Erinnerungen. Eigener Gemini-API-Schlüssel erforderlich; in dieser öffentlichen Ausgabe sind keine Zugangsdaten enthalten. iCloud-Backups benötigen passende Berechtigungen beim Signieren; Datei-Backups sind unabhängig davon verfügbar.",
+      "localizedDescription": "Dein animiertes virtuelles Haustier. KI-Bot für Kinder ab 3 Jahren. Funktionen: Textchat, Sprachgesprächen, Bilder erstellen/analysieren und Erinnerungen. Eigener Gemini-API-Schlüssel erforderlich; in dieser öffentlichen Ausgabe sind keine Zugangsdaten enthalten. iCloud-Backups benötigen passende Berechtigungen beim Signieren; Datei-Backups sind unabhängig davon verfügbar.",
       "iconURL": "https://raw.githubusercontent.com/zynthec-dev/zynthec-apps-altsource/main/icons/mipet.png",
       "category": "entertainment",
       "versions": [
